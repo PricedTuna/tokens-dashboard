@@ -32,15 +32,14 @@ const FilterSidebar = ({ filters, setFilters, models, datasets, onFileUpload, on
         <div className="filter-section">
           <label>Quick Select</label>
           <select 
-            value={availableFiles.includes(currentFile) || currentFile === 'example' ? currentFile : 'custom'} 
+            value={currentFile} 
             onChange={e => onPreloadedSelect(e.target.value)}
           >
-            <option value="example">Default (Example)</option>
             {availableFiles.map(file => (
               <option key={file} value={file}>{file}</option>
             ))}
-            {!availableFiles.includes(currentFile) && currentFile !== 'example' && (
-              <option value="custom">Custom: {currentFile}</option>
+            {currentFile && !availableFiles.includes(currentFile) && (
+              <option value={currentFile}>Custom: {currentFile}</option>
             )}
           </select>
         </div>

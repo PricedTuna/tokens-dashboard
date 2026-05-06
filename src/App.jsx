@@ -18,9 +18,12 @@ import KpiCard from './components/KpiCard'
 import FormatComparison from './components/FormatComparison'
 import MetricChart from './components/MetricChart'
 
+const defaultFileName = Object.keys(preloadedFiles)[0] || ''
+const defaultFileData = preloadedFiles[defaultFileName] || data
+
 function App() {
-  const [rawData, setRawData] = useState(data)
-  const [currentFileName, setCurrentFileName] = useState('example')
+  const [rawData, setRawData] = useState(defaultFileData)
+  const [currentFileName, setCurrentFileName] = useState(defaultFileName)
   const [filters, setFilters] = useState({
     model: '',
     dataset: '',

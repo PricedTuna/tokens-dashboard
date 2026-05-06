@@ -73,6 +73,19 @@ const FilterSidebar = ({ filters, setFilters, models, datasets, onFileUpload, on
             {datasets.map(d => <option key={d} value={d}>{d}</option>)}
           </select>
         </div>
+
+        <div className="filter-section">
+          <label>Focus Format</label>
+          <select 
+            value={filters.format} 
+            onChange={e => setFilters(prev => ({ ...prev, format: e.target.value }))}
+          >
+            <option value="">All Formats</option>
+            <option value="tron">TRON</option>
+            <option value="toon">TOON</option>
+            <option value="jton">JTON</option>
+          </select>
+        </div>
       </div>
 
       

@@ -23,7 +23,8 @@ function App() {
   const [currentFileName, setCurrentFileName] = useState('example')
   const [filters, setFilters] = useState({
     model: '',
-    dataset: ''
+    dataset: '',
+    format: ''
   })
 
 
@@ -101,25 +102,31 @@ function App() {
               <p>Comparing TRON, TOON, and JTON performance metrics</p>
             </div>
             <div className="format-grid">
-               <FormatComparison 
-                 format={totals.tron} 
-                 name="tron" 
-                 totalEvals={filteredRows.length} 
-               />
-               <FormatComparison 
-                 format={totals.toon} 
-                 name="toon" 
-                 totalEvals={filteredRows.length} 
-               />
-               <FormatComparison 
-                 format={totals.jton} 
-                 name="jton" 
-                 totalEvals={filteredRows.length} 
-               />
+               {(!filters.format || filters.format === 'tron') && (
+                 <FormatComparison 
+                   format={totals.tron} 
+                   name="tron" 
+                   totalEvals={filteredRows.length} 
+                 />
+               )}
+               {(!filters.format || filters.format === 'toon') && (
+                 <FormatComparison 
+                   format={totals.toon} 
+                   name="toon" 
+                   totalEvals={filteredRows.length} 
+                 />
+               )}
+               {(!filters.format || filters.format === 'jton') && (
+                 <FormatComparison 
+                   format={totals.jton} 
+                   name="jton" 
+                   totalEvals={filteredRows.length} 
+                 />
+               )}
             </div>
           </section>
 
-          <MetricChart data={totals} title="Token Usage by Format" />
+          <MetricChart data={totals} title="Token Usage by Format" focusFormat={filters.format} />
         </div>
 
         <section className="summary-banner animate-in">
@@ -146,9 +153,9 @@ function App() {
                      <tr>
                        <th>Evaluation ID</th>
                        <th>Model / Dataset</th>
-                       <th>TRON Tokens</th>
-                       <th>TOON Tokens</th>
-                       <th>JTON Tokens</th>
+                       {(!filters.format || filters.format === 'tron') && <th>TRON Tokens</th>}
+                       {(!filters.format || filters.format === 'toon') && <th>TOON Tokens</th>}
+                       {(!filters.format || filters.format === 'jton') && <th>JTON Tokens</th>}
                      </tr>
                    </thead>
                    <tbody>
@@ -165,21 +172,27 @@ function App() {
                              <span className="d-name">{row.dataset}</span>
                            </div>
                          </td>
-                         <td>
-                            <div className={`token-cell ${row.formats.tron?.isCorrect ? 'c-correct' : 'c-error'}`}>
-                              {row.formats.tron?.tokens.total.toLocaleString()}
-                            </div>
-                         </td>
-                         <td>
-                            <div className={`token-cell ${row.formats.toon?.isCorrect ? 'c-correct' : 'c-error'}`}>
-                              {row.formats.toon?.tokens.total.toLocaleString()}
-                            </div>
-                         </td>
-                         <td>
-                            <div className={`token-cell ${row.formats.jton?.isCorrect ? 'c-correct' : 'c-error'}`}>
-                              {row.formats.jton?.tokens.total.toLocaleString()}
-                            </div>
-                         </td>
+                         {(!filters.format || filters.format === 'tron') && (
+                           <td>
+                              <div className={`token-cell ${row.formats.tron?.isCorrect ? 'c-correct' : 'c-error'}`}>
+                                {row.formats.tron?.tokens.total.toLocaleString()}
+                              </div>
+                           </td>
+                         )}
+                         {(!filters.format || filters.format === 'toon') && (
+                           <td>
+                              <div className={`token-cell ${row.formats.toon?.isCorrect ? 'c-correct' : 'c-error'}`}>
+                                {row.formats.toon?.tokens.total.toLocaleString()}
+                              </div>
+                           </td>
+                         )}
+                         {(!filters.format || filters.format === 'jton') && (
+                           <td>
+                              <div className={`token-cell ${row.formats.jton?.isCorrect ? 'c-correct' : 'c-error'}`}>
+                                {row.formats.jton?.tokens.total.toLocaleString()}
+                              </div>
+                           </td>
+                         )}
                        </tr>
                      ))}
                    </tbody>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, Legend } from 'recharts';
 
-const MetricChart = ({ data, title }) => {
+const MetricChart = ({ data, title, focusFormat }) => {
   const chartData = [
     { 
       name: 'TRON', 
@@ -21,7 +21,7 @@ const MetricChart = ({ data, title }) => {
       output: data.jton.output, 
       reasoning: data.jton.reasoning 
     },
-  ];
+  ].filter(d => !focusFormat || d.name.toLowerCase() === focusFormat.toLowerCase());
 
   return (
     <div className="glass chart-container animate-in">

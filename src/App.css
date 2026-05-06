@@ -62,7 +62,7 @@
 .filter-section label {
   font-size: 12px;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: #cbd5e1;
 }
 
 .filter-section select,
@@ -76,6 +76,11 @@
   transition: all 0.2s;
   font-family: inherit;
   font-size: 13px;
+}
+
+.filter-section select option {
+  background: #1e293b;
+  color: var(--text-primary);
 }
 
 .filter-section select:hover,

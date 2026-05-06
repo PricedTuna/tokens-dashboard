@@ -91,7 +91,6 @@ function App() {
           </div>
           <div className="header-stats">
             <span className="stat-pill">Total evals: {filteredRows.length}</span>
-            <span className="stat-pill accent">Live View</span>
           </div>
         </header>
 

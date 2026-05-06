@@ -75,9 +75,7 @@ const FilterSidebar = ({ filters, setFilters, models, datasets, onFileUpload, on
         </div>
       </div>
 
-      <div className="sidebar-footer">
-        <div className="version-pill">v2.0.0-aesthetic</div>
-      </div>
+      
     </aside>
   );
 };

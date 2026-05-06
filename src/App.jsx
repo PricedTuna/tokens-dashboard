@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
+import { Menu } from 'lucide-react'
 import './App.css'
 import data from '../example.json'
 import { flattenData, calculateTotals } from './utils/data-utils'
@@ -14,7 +15,6 @@ const preloadedFiles = Object.keys(preloadedModules).reduce((acc, path) => {
 
 // Components
 import FilterSidebar from './components/FilterSidebar'
-import KpiCard from './components/KpiCard'
 import FormatComparison from './components/FormatComparison'
 import MetricChart from './components/MetricChart'
 
@@ -29,6 +29,16 @@ function App() {
     dataset: '',
     format: ''
   })
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  // Prevent scroll when sidebar is open on mobile
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isSidebarOpen])
 
 
   const handleFileUpload = (e) => {
@@ -41,7 +51,7 @@ function App() {
         const json = JSON.parse(event.target.result)
         setRawData(json)
         setCurrentFileName(file.name.replace('.json', ''))
-      } catch (err) {
+      } catch {
         alert("Error parsing JSON file. Please check the format.")
       }
     }
@@ -74,7 +84,20 @@ function App() {
   const datasets = useMemo(() => [...new Set(allRows.map(r => r.dataset))], [allRows])
 
   return (
-    <div className="dashboard-container">
+    <div className={`dashboard-container ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+      {isSidebarOpen && (
+        <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)} />
+      )}
+      
+      <header className="mobile-header">
+        <button className="mobile-menu-toggle" onClick={() => setIsSidebarOpen(true)}>
+          <Menu size={24} />
+        </button>
+        <div className="mobile-logo-container">
+          <span className="logo">Tron-TDV</span>
+        </div>
+      </header>
+
       <FilterSidebar 
         filters={filters} 
         setFilters={setFilters} 
@@ -84,6 +107,8 @@ function App() {
         onPreloadedSelect={handlePreloadedSelect}
         currentFile={currentFileName}
         availableFiles={Object.keys(preloadedFiles)}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
       />
 
 

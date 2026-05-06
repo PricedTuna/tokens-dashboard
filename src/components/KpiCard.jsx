@@ -1,4 +1,3 @@
-import React from 'react';
 import { TrendingUp, Activity, Zap, Cpu } from 'lucide-react';
 
 const icons = {

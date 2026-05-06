@@ -1,4 +1,4 @@
-import { CheckCircle2, XCircle, Clock, Hash } from 'lucide-react';
+import { Hash } from 'lucide-react';
 
 const FormatComparison = ({ format, name, totalEvals }) => {
   const accuracy = (format.correct / totalEvals) * 100 || 0;

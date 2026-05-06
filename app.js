@@ -92,7 +92,7 @@ function applyFilters() {
 
 function render(data) {
   renderTable(data);
-  renderKPIs(data);
+  renderKPIs(data, flatData);
 }
 
 function renderTable(data) {
@@ -115,12 +115,51 @@ function renderTable(data) {
   });
 }
 
-function renderKPIs(data) {
+function renderKPIs(data, totalData) {
   const total = data.length;
 
   const accuracy = data.filter(d => d.correct).length / total;
   const tokens = data.reduce((a, b) => a + b.tokens, 0);
   const latency = data.reduce((a, b) => a + b.latency, 0) / total;
+
+  const models = [...new Set(totalData.map(d => d.model))];
+  const tbody = document.querySelector("#tokenTable tbody");
+  tbody.innerHTML = "";
+
+  let totalTron = 0, totalToon = 0, totalJton = 0;
+
+  models.forEach(model => {
+    const modelData = totalData.filter(d => d.model === model);
+    const tronData = modelData.filter(d => d.format === "tron");
+    const toonData = modelData.filter(d => d.format === "toon");
+    const jtonData = modelData.filter(d => d.format === "jton");
+
+    const tron = tronData.length ? tronData.reduce((a, b) => a + b.tokens, 0) : "--";
+    const toon = toonData.length ? toonData.reduce((a, b) => a + b.tokens, 0) : "--";
+    const jton = jtonData.length ? jtonData.reduce((a, b) => a + b.tokens, 0) : "--";
+
+    if (tron !== "--") totalTron += tron;
+    if (toon !== "--") totalToon += toon;
+    if (jton !== "--") totalJton += jton;
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${model}</td>
+      <td>${tron}</td>
+      <td>${toon}</td>
+      <td>${jton}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  const totalRow = document.createElement("tr");
+  totalRow.innerHTML = `
+    <td><strong>Total</strong></td>
+    <td><strong>${totalTron || "--"}</strong></td>
+    <td><strong>${totalToon || "--"}</strong></td>
+    <td><strong>${totalJton || "--"}</strong></td>
+  `;
+  tbody.insertBefore(totalRow, tbody.firstChild);
 
   document.getElementById("accuracy").textContent = (accuracy * 100).toFixed(2) + "%";
   document.getElementById("tokens").textContent = tokens;

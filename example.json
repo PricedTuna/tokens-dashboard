@@ -1,0 +1,3084 @@
+{
+  "metadata": {
+    "generatedAt": "2026-05-06T20:47:42.303Z",
+    "source": "Only token usage metadata returned by the LLM API through the AI SDK generateText() usage object. No tokenizer, library-estimated, or prompt-string token counts are used.",
+    "notes": [
+      "tokenTotals are sums of reported API fields only. Missing fields are not inferred from other fields.",
+      "usageMetadata contains the full usage object captured for that evaluation, including provider raw usage when the provider returns it.",
+      "usageMetadataSource is legacy-api-token-fields only for older cached results that predate full usage metadata capture."
+    ]
+  },
+  "summary": {
+    "evaluationCount": 30,
+    "correctCount": 30,
+    "incorrectCount": 0,
+    "missingUsageMetadataCount": 0,
+    "tokenTotals": {
+      "inputTokens": 250517,
+      "outputTokens": 25169,
+      "totalTokens": 275686,
+      "reasoningTokens": 11904,
+      "cachedInputTokens": 105344,
+      "inputTokenDetails.noCacheTokens": 145173,
+      "inputTokenDetails.cacheReadTokens": 105344,
+      "inputTokenDetails.cacheWriteTokens": null,
+      "outputTokenDetails.textTokens": 13265,
+      "outputTokenDetails.reasoningTokens": 11904
+    },
+    "tokenFieldReportCounts": {
+      "inputTokens": 30,
+      "outputTokens": 30,
+      "totalTokens": 30,
+      "reasoningTokens": 30,
+      "cachedInputTokens": 30,
+      "inputTokenDetails.noCacheTokens": 30,
+      "inputTokenDetails.cacheReadTokens": 30,
+      "inputTokenDetails.cacheWriteTokens": 0,
+      "outputTokenDetails.textTokens": 30,
+      "outputTokenDetails.reasoningTokens": 30
+    }
+  },
+  "questions": {
+    "q1": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 24716,
+          "outputTokens": 3176,
+          "totalTokens": 27892,
+          "reasoningTokens": 1536,
+          "cachedInputTokens": 0,
+          "inputTokenDetails.noCacheTokens": 24716,
+          "inputTokenDetails.cacheReadTokens": 0,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1640,
+          "outputTokenDetails.reasoningTokens": 1536
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q1",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "What is the salary of Darla Mertz MD?",
+        "expected": "146288"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 24716,
+              "outputTokens": 3176,
+              "totalTokens": 27892,
+              "reasoningTokens": 1536,
+              "cachedInputTokens": 0,
+              "inputTokenDetails.noCacheTokens": 24716,
+              "inputTokenDetails.cacheReadTokens": 0,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1640,
+              "outputTokenDetails.reasoningTokens": 1536
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 24716,
+                  "outputTokens": 3176,
+                  "totalTokens": 27892,
+                  "reasoningTokens": 1536,
+                  "cachedInputTokens": 0,
+                  "inputTokenDetails.noCacheTokens": 24716,
+                  "inputTokenDetails.cacheReadTokens": 0,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1640,
+                  "outputTokenDetails.reasoningTokens": 1536
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7489,
+                      "outputTokens": 179,
+                      "totalTokens": 7668,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 7489,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 115,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7489,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 7489,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 179,
+                    "outputTokenDetails": {
+                      "textTokens": 115,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7668,
+                    "raw": {
+                      "input_tokens": 7489,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 179,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "146288",
+                    "actual": "146288",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 3789.258498000001
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8348,
+                      "outputTokens": 2843,
+                      "totalTokens": 11191,
+                      "reasoningTokens": 1408,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8348,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 1435,
+                      "outputTokenDetails.reasoningTokens": 1408
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8348,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8348,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 2843,
+                    "outputTokenDetails": {
+                      "textTokens": 1435,
+                      "reasoningTokens": 1408
+                    },
+                    "totalTokens": 11191,
+                    "raw": {
+                      "input_tokens": 8348,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 2843,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 1408
+                      }
+                    },
+                    "reasoningTokens": 1408,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "146288",
+                    "actual": "146288",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 13322.193173
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8879,
+                      "outputTokens": 154,
+                      "totalTokens": 9033,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8879,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 90,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8879,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8879,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 154,
+                    "outputTokenDetails": {
+                      "textTokens": 90,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9033,
+                    "raw": {
+                      "input_tokens": 8879,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 154,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "146288",
+                    "actual": "146288",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 3660.206007999999
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q2": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 24791,
+          "outputTokens": 1946,
+          "totalTokens": 26737,
+          "reasoningTokens": 896,
+          "cachedInputTokens": 7296,
+          "inputTokenDetails.noCacheTokens": 17495,
+          "inputTokenDetails.cacheReadTokens": 7296,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1050,
+          "outputTokenDetails.reasoningTokens": 896
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q2",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "What department does Darnell Koss work in?",
+        "expected": "Marketing"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 24791,
+              "outputTokens": 1946,
+              "totalTokens": 26737,
+              "reasoningTokens": 896,
+              "cachedInputTokens": 7296,
+              "inputTokenDetails.noCacheTokens": 17495,
+              "inputTokenDetails.cacheReadTokens": 7296,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1050,
+              "outputTokenDetails.reasoningTokens": 896
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 24791,
+                  "outputTokens": 1946,
+                  "totalTokens": 26737,
+                  "reasoningTokens": 896,
+                  "cachedInputTokens": 7296,
+                  "inputTokenDetails.noCacheTokens": 17495,
+                  "inputTokenDetails.cacheReadTokens": 7296,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1050,
+                  "outputTokenDetails.reasoningTokens": 896
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7514,
+                      "outputTokens": 151,
+                      "totalTokens": 7665,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 7296,
+                      "inputTokenDetails.noCacheTokens": 218,
+                      "inputTokenDetails.cacheReadTokens": 7296,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 87,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7514,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 218,
+                      "cacheReadTokens": 7296,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 151,
+                    "outputTokenDetails": {
+                      "textTokens": 87,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7665,
+                    "raw": {
+                      "input_tokens": 7514,
+                      "input_tokens_details": {
+                        "cached_tokens": 7296
+                      },
+                      "output_tokens": 151,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 7296
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "Marketing",
+                    "actual": "Marketing",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 3036.8309530000006
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8373,
+                      "outputTokens": 1607,
+                      "totalTokens": 9980,
+                      "reasoningTokens": 768,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8373,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 839,
+                      "outputTokenDetails.reasoningTokens": 768
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8373,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8373,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 1607,
+                    "outputTokenDetails": {
+                      "textTokens": 839,
+                      "reasoningTokens": 768
+                    },
+                    "totalTokens": 9980,
+                    "raw": {
+                      "input_tokens": 8373,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 1607,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 768
+                      }
+                    },
+                    "reasoningTokens": 768,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "Marketing",
+                    "actual": "Marketing",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 10427.606423999998
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8904,
+                      "outputTokens": 188,
+                      "totalTokens": 9092,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8904,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 124,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8904,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8904,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 188,
+                    "outputTokenDetails": {
+                      "textTokens": 124,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9092,
+                    "raw": {
+                      "input_tokens": 8904,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 188,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "Marketing",
+                    "actual": "Marketing",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 3561.8789350000006
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q3": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 24860,
+          "outputTokens": 2579,
+          "totalTokens": 27439,
+          "reasoningTokens": 1216,
+          "cachedInputTokens": 0,
+          "inputTokenDetails.noCacheTokens": 24860,
+          "inputTokenDetails.cacheReadTokens": 0,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1363,
+          "outputTokenDetails.reasoningTokens": 1216
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q3",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "What is the email address of Freida Farrell?",
+        "expected": "omari33@hotmail.com"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 24860,
+              "outputTokens": 2579,
+              "totalTokens": 27439,
+              "reasoningTokens": 1216,
+              "cachedInputTokens": 0,
+              "inputTokenDetails.noCacheTokens": 24860,
+              "inputTokenDetails.cacheReadTokens": 0,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1363,
+              "outputTokenDetails.reasoningTokens": 1216
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 24860,
+                  "outputTokens": 2579,
+                  "totalTokens": 27439,
+                  "reasoningTokens": 1216,
+                  "cachedInputTokens": 0,
+                  "inputTokenDetails.noCacheTokens": 24860,
+                  "inputTokenDetails.cacheReadTokens": 0,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1363,
+                  "outputTokenDetails.reasoningTokens": 1216
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7537,
+                      "outputTokens": 171,
+                      "totalTokens": 7708,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 7537,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 107,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7537,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 7537,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 171,
+                    "outputTokenDetails": {
+                      "textTokens": 107,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7708,
+                    "raw": {
+                      "input_tokens": 7537,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 171,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "omari33@hotmail.com",
+                    "actual": "omari33@hotmail.com",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2875.478597000001
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8396,
+                      "outputTokens": 2117,
+                      "totalTokens": 10513,
+                      "reasoningTokens": 1024,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8396,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 1093,
+                      "outputTokenDetails.reasoningTokens": 1024
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8396,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8396,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 2117,
+                    "outputTokenDetails": {
+                      "textTokens": 1093,
+                      "reasoningTokens": 1024
+                    },
+                    "totalTokens": 10513,
+                    "raw": {
+                      "input_tokens": 8396,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 2117,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 1024
+                      }
+                    },
+                    "reasoningTokens": 1024,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "omari33@hotmail.com",
+                    "actual": "omari33@hotmail.com",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 11145.867268000002
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8927,
+                      "outputTokens": 291,
+                      "totalTokens": 9218,
+                      "reasoningTokens": 128,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8927,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 163,
+                      "outputTokenDetails.reasoningTokens": 128
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8927,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8927,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 291,
+                    "outputTokenDetails": {
+                      "textTokens": 163,
+                      "reasoningTokens": 128
+                    },
+                    "totalTokens": 9218,
+                    "raw": {
+                      "input_tokens": 8927,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 291,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 128
+                      }
+                    },
+                    "reasoningTokens": 128,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "omari33@hotmail.com",
+                    "actual": "omari33@hotmail.com",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2661.2918019999997
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q4": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 24950,
+          "outputTokens": 1937,
+          "totalTokens": 26887,
+          "reasoningTokens": 896,
+          "cachedInputTokens": 0,
+          "inputTokenDetails.noCacheTokens": 24950,
+          "inputTokenDetails.cacheReadTokens": 0,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1041,
+          "outputTokenDetails.reasoningTokens": 896
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q4",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "How many years of experience does Austin Morissette III have?",
+        "expected": "13"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 24950,
+              "outputTokens": 1937,
+              "totalTokens": 26887,
+              "reasoningTokens": 896,
+              "cachedInputTokens": 0,
+              "inputTokenDetails.noCacheTokens": 24950,
+              "inputTokenDetails.cacheReadTokens": 0,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1041,
+              "outputTokenDetails.reasoningTokens": 896
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 24950,
+                  "outputTokens": 1937,
+                  "totalTokens": 26887,
+                  "reasoningTokens": 896,
+                  "cachedInputTokens": 0,
+                  "inputTokenDetails.noCacheTokens": 24950,
+                  "inputTokenDetails.cacheReadTokens": 0,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1041,
+                  "outputTokenDetails.reasoningTokens": 896
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7567,
+                      "outputTokens": 159,
+                      "totalTokens": 7726,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 7567,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 95,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7567,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 7567,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 159,
+                    "outputTokenDetails": {
+                      "textTokens": 95,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7726,
+                    "raw": {
+                      "input_tokens": 7567,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 159,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "13",
+                    "actual": "13",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2580.144303000001
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8426,
+                      "outputTokens": 1595,
+                      "totalTokens": 10021,
+                      "reasoningTokens": 768,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8426,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 827,
+                      "outputTokenDetails.reasoningTokens": 768
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8426,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8426,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 1595,
+                    "outputTokenDetails": {
+                      "textTokens": 827,
+                      "reasoningTokens": 768
+                    },
+                    "totalTokens": 10021,
+                    "raw": {
+                      "input_tokens": 8426,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 1595,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 768
+                      }
+                    },
+                    "reasoningTokens": 768,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "13",
+                    "actual": "13",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 6254.497573000001
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8957,
+                      "outputTokens": 183,
+                      "totalTokens": 9140,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8957,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 119,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8957,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8957,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 183,
+                    "outputTokenDetails": {
+                      "textTokens": 119,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9140,
+                    "raw": {
+                      "input_tokens": 8957,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 183,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "13",
+                    "actual": "13",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2655.3630279999998
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q5": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 25022,
+          "outputTokens": 1687,
+          "totalTokens": 26709,
+          "reasoningTokens": 768,
+          "cachedInputTokens": 7168,
+          "inputTokenDetails.noCacheTokens": 17854,
+          "inputTokenDetails.cacheReadTokens": 7168,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 919,
+          "outputTokenDetails.reasoningTokens": 768
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q5",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "Is Mrs. Janice Osinski an active employee?",
+        "expected": "yes"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 25022,
+              "outputTokens": 1687,
+              "totalTokens": 26709,
+              "reasoningTokens": 768,
+              "cachedInputTokens": 7168,
+              "inputTokenDetails.noCacheTokens": 17854,
+              "inputTokenDetails.cacheReadTokens": 7168,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 919,
+              "outputTokenDetails.reasoningTokens": 768
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 25022,
+                  "outputTokens": 1687,
+                  "totalTokens": 26709,
+                  "reasoningTokens": 768,
+                  "cachedInputTokens": 7168,
+                  "inputTokenDetails.noCacheTokens": 17854,
+                  "inputTokenDetails.cacheReadTokens": 7168,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 919,
+                  "outputTokenDetails.reasoningTokens": 768
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7591,
+                      "outputTokens": 158,
+                      "totalTokens": 7749,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 7168,
+                      "inputTokenDetails.noCacheTokens": 423,
+                      "inputTokenDetails.cacheReadTokens": 7168,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 94,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7591,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 423,
+                      "cacheReadTokens": 7168,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 158,
+                    "outputTokenDetails": {
+                      "textTokens": 94,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7749,
+                    "raw": {
+                      "input_tokens": 7591,
+                      "input_tokens_details": {
+                        "cached_tokens": 7168
+                      },
+                      "output_tokens": 158,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 7168
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "yes",
+                    "actual": "true",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 1950.0342170000004
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8450,
+                      "outputTokens": 1473,
+                      "totalTokens": 9923,
+                      "reasoningTokens": 704,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8450,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 769,
+                      "outputTokenDetails.reasoningTokens": 704
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8450,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8450,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 1473,
+                    "outputTokenDetails": {
+                      "textTokens": 769,
+                      "reasoningTokens": 704
+                    },
+                    "totalTokens": 9923,
+                    "raw": {
+                      "input_tokens": 8450,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 1473,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 704
+                      }
+                    },
+                    "reasoningTokens": 704,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "yes",
+                    "actual": "1",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 38803.181551
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8981,
+                      "outputTokens": 56,
+                      "totalTokens": 9037,
+                      "reasoningTokens": 0,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8981,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 56,
+                      "outputTokenDetails.reasoningTokens": 0
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8981,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8981,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 56,
+                    "outputTokenDetails": {
+                      "textTokens": 56,
+                      "reasoningTokens": 0
+                    },
+                    "totalTokens": 9037,
+                    "raw": {
+                      "input_tokens": 8981,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 56,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 0
+                      }
+                    },
+                    "reasoningTokens": 0,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "yes",
+                    "actual": "true",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2566.926514999999
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q6": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 25085,
+          "outputTokens": 2349,
+          "totalTokens": 27434,
+          "reasoningTokens": 1088,
+          "cachedInputTokens": 16896,
+          "inputTokenDetails.noCacheTokens": 8189,
+          "inputTokenDetails.cacheReadTokens": 16896,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1261,
+          "outputTokenDetails.reasoningTokens": 1088
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q6",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "What is the salary of Rosie Bauch?",
+        "expected": "121951"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 25085,
+              "outputTokens": 2349,
+              "totalTokens": 27434,
+              "reasoningTokens": 1088,
+              "cachedInputTokens": 16896,
+              "inputTokenDetails.noCacheTokens": 8189,
+              "inputTokenDetails.cacheReadTokens": 16896,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1261,
+              "outputTokenDetails.reasoningTokens": 1088
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 25085,
+                  "outputTokens": 2349,
+                  "totalTokens": 27434,
+                  "reasoningTokens": 1088,
+                  "cachedInputTokens": 16896,
+                  "inputTokenDetails.noCacheTokens": 8189,
+                  "inputTokenDetails.cacheReadTokens": 16896,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1261,
+                  "outputTokenDetails.reasoningTokens": 1088
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7612,
+                      "outputTokens": 177,
+                      "totalTokens": 7789,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 7612,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 113,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7612,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 7612,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 177,
+                    "outputTokenDetails": {
+                      "textTokens": 113,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7789,
+                    "raw": {
+                      "input_tokens": 7612,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 177,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "121951",
+                    "actual": "121951",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2452.206450999998
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8471,
+                      "outputTokens": 1976,
+                      "totalTokens": 10447,
+                      "reasoningTokens": 960,
+                      "cachedInputTokens": 8064,
+                      "inputTokenDetails.noCacheTokens": 407,
+                      "inputTokenDetails.cacheReadTokens": 8064,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 1016,
+                      "outputTokenDetails.reasoningTokens": 960
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8471,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 407,
+                      "cacheReadTokens": 8064,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 1976,
+                    "outputTokenDetails": {
+                      "textTokens": 1016,
+                      "reasoningTokens": 960
+                    },
+                    "totalTokens": 10447,
+                    "raw": {
+                      "input_tokens": 8471,
+                      "input_tokens_details": {
+                        "cached_tokens": 8064
+                      },
+                      "output_tokens": 1976,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 960
+                      }
+                    },
+                    "reasoningTokens": 960,
+                    "cachedInputTokens": 8064
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "121951",
+                    "actual": "121951",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 48740.69821100001
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 9002,
+                      "outputTokens": 196,
+                      "totalTokens": 9198,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 8832,
+                      "inputTokenDetails.noCacheTokens": 170,
+                      "inputTokenDetails.cacheReadTokens": 8832,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 132,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 9002,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 170,
+                      "cacheReadTokens": 8832,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 196,
+                    "outputTokenDetails": {
+                      "textTokens": 132,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9198,
+                    "raw": {
+                      "input_tokens": 9002,
+                      "input_tokens_details": {
+                        "cached_tokens": 8832
+                      },
+                      "output_tokens": 196,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 8832
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "121951",
+                    "actual": "121951",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2178.7195859999993
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q7": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 25160,
+          "outputTokens": 2510,
+          "totalTokens": 27670,
+          "reasoningTokens": 1216,
+          "cachedInputTokens": 8832,
+          "inputTokenDetails.noCacheTokens": 16328,
+          "inputTokenDetails.cacheReadTokens": 8832,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1294,
+          "outputTokenDetails.reasoningTokens": 1216
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q7",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "What department does Michaela Hettinger work in?",
+        "expected": "Engineering"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 25160,
+              "outputTokens": 2510,
+              "totalTokens": 27670,
+              "reasoningTokens": 1216,
+              "cachedInputTokens": 8832,
+              "inputTokenDetails.noCacheTokens": 16328,
+              "inputTokenDetails.cacheReadTokens": 8832,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1294,
+              "outputTokenDetails.reasoningTokens": 1216
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 25160,
+                  "outputTokens": 2510,
+                  "totalTokens": 27670,
+                  "reasoningTokens": 1216,
+                  "cachedInputTokens": 8832,
+                  "inputTokenDetails.noCacheTokens": 16328,
+                  "inputTokenDetails.cacheReadTokens": 8832,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1294,
+                  "outputTokenDetails.reasoningTokens": 1216
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7637,
+                      "outputTokens": 152,
+                      "totalTokens": 7789,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 7637,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 88,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7637,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 7637,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 152,
+                    "outputTokenDetails": {
+                      "textTokens": 88,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7789,
+                    "raw": {
+                      "input_tokens": 7637,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 152,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "Engineering",
+                    "actual": "Engineering",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2356.4230260000004
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8496,
+                      "outputTokens": 2210,
+                      "totalTokens": 10706,
+                      "reasoningTokens": 1088,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 8496,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 1122,
+                      "outputTokenDetails.reasoningTokens": 1088
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8496,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 8496,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 2210,
+                    "outputTokenDetails": {
+                      "textTokens": 1122,
+                      "reasoningTokens": 1088
+                    },
+                    "totalTokens": 10706,
+                    "raw": {
+                      "input_tokens": 8496,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 2210,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 1088
+                      }
+                    },
+                    "reasoningTokens": 1088,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "Engineering",
+                    "actual": "Engineering",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 9318.638858999999
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 9027,
+                      "outputTokens": 148,
+                      "totalTokens": 9175,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 8832,
+                      "inputTokenDetails.noCacheTokens": 195,
+                      "inputTokenDetails.cacheReadTokens": 8832,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 84,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 9027,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 195,
+                      "cacheReadTokens": 8832,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 148,
+                    "outputTokenDetails": {
+                      "textTokens": 84,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9175,
+                    "raw": {
+                      "input_tokens": 9027,
+                      "input_tokens_details": {
+                        "cached_tokens": 8832
+                      },
+                      "output_tokens": 148,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 8832
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "Engineering",
+                    "actual": "Engineering",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 1707.382020000001
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q8": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 25229,
+          "outputTokens": 4234,
+          "totalTokens": 29463,
+          "reasoningTokens": 2048,
+          "cachedInputTokens": 16896,
+          "inputTokenDetails.noCacheTokens": 8333,
+          "inputTokenDetails.cacheReadTokens": 16896,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 2186,
+          "outputTokenDetails.reasoningTokens": 2048
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q8",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "What is the email address of Brennon Parker?",
+        "expected": "erik_metz@yahoo.com"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 25229,
+              "outputTokens": 4234,
+              "totalTokens": 29463,
+              "reasoningTokens": 2048,
+              "cachedInputTokens": 16896,
+              "inputTokenDetails.noCacheTokens": 8333,
+              "inputTokenDetails.cacheReadTokens": 16896,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 2186,
+              "outputTokenDetails.reasoningTokens": 2048
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 25229,
+                  "outputTokens": 4234,
+                  "totalTokens": 29463,
+                  "reasoningTokens": 2048,
+                  "cachedInputTokens": 16896,
+                  "inputTokenDetails.noCacheTokens": 8333,
+                  "inputTokenDetails.cacheReadTokens": 16896,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 2186,
+                  "outputTokenDetails.reasoningTokens": 2048
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7660,
+                      "outputTokens": 412,
+                      "totalTokens": 8072,
+                      "reasoningTokens": 192,
+                      "cachedInputTokens": 0,
+                      "inputTokenDetails.noCacheTokens": 7660,
+                      "inputTokenDetails.cacheReadTokens": 0,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 220,
+                      "outputTokenDetails.reasoningTokens": 192
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7660,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 7660,
+                      "cacheReadTokens": 0,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 412,
+                    "outputTokenDetails": {
+                      "textTokens": 220,
+                      "reasoningTokens": 192
+                    },
+                    "totalTokens": 8072,
+                    "raw": {
+                      "input_tokens": 7660,
+                      "input_tokens_details": {
+                        "cached_tokens": 0
+                      },
+                      "output_tokens": 412,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 192
+                      }
+                    },
+                    "reasoningTokens": 192,
+                    "cachedInputTokens": 0
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "erik_metz@yahoo.com",
+                    "actual": "erik_metz@yahoo.com",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2457.2022719999986
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8519,
+                      "outputTokens": 3527,
+                      "totalTokens": 12046,
+                      "reasoningTokens": 1728,
+                      "cachedInputTokens": 8064,
+                      "inputTokenDetails.noCacheTokens": 455,
+                      "inputTokenDetails.cacheReadTokens": 8064,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 1799,
+                      "outputTokenDetails.reasoningTokens": 1728
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8519,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 455,
+                      "cacheReadTokens": 8064,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 3527,
+                    "outputTokenDetails": {
+                      "textTokens": 1799,
+                      "reasoningTokens": 1728
+                    },
+                    "totalTokens": 12046,
+                    "raw": {
+                      "input_tokens": 8519,
+                      "input_tokens_details": {
+                        "cached_tokens": 8064
+                      },
+                      "output_tokens": 3527,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 1728
+                      }
+                    },
+                    "reasoningTokens": 1728,
+                    "cachedInputTokens": 8064
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "erik_metz@yahoo.com",
+                    "actual": "erik_metz@yahoo.com",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 92178.351039
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 9050,
+                      "outputTokens": 295,
+                      "totalTokens": 9345,
+                      "reasoningTokens": 128,
+                      "cachedInputTokens": 8832,
+                      "inputTokenDetails.noCacheTokens": 218,
+                      "inputTokenDetails.cacheReadTokens": 8832,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 167,
+                      "outputTokenDetails.reasoningTokens": 128
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 9050,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 218,
+                      "cacheReadTokens": 8832,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 295,
+                    "outputTokenDetails": {
+                      "textTokens": 167,
+                      "reasoningTokens": 128
+                    },
+                    "totalTokens": 9345,
+                    "raw": {
+                      "input_tokens": 9050,
+                      "input_tokens_details": {
+                        "cached_tokens": 8832
+                      },
+                      "output_tokens": 295,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 128
+                      }
+                    },
+                    "reasoningTokens": 128,
+                    "cachedInputTokens": 8832
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "erik_metz@yahoo.com",
+                    "actual": "erik_metz@yahoo.com",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 3484.6558559999976
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q9": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 25319,
+          "outputTokens": 2322,
+          "totalTokens": 27641,
+          "reasoningTokens": 1088,
+          "cachedInputTokens": 24064,
+          "inputTokenDetails.noCacheTokens": 1255,
+          "inputTokenDetails.cacheReadTokens": 24064,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1234,
+          "outputTokenDetails.reasoningTokens": 1088
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q9",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "How many years of experience does Cody Bogisich have?",
+        "expected": "11"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 25319,
+              "outputTokens": 2322,
+              "totalTokens": 27641,
+              "reasoningTokens": 1088,
+              "cachedInputTokens": 24064,
+              "inputTokenDetails.noCacheTokens": 1255,
+              "inputTokenDetails.cacheReadTokens": 24064,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1234,
+              "outputTokenDetails.reasoningTokens": 1088
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 25319,
+                  "outputTokens": 2322,
+                  "totalTokens": 27641,
+                  "reasoningTokens": 1088,
+                  "cachedInputTokens": 24064,
+                  "inputTokenDetails.noCacheTokens": 1255,
+                  "inputTokenDetails.cacheReadTokens": 24064,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1234,
+                  "outputTokenDetails.reasoningTokens": 1088
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7690,
+                      "outputTokens": 186,
+                      "totalTokens": 7876,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 7168,
+                      "inputTokenDetails.noCacheTokens": 522,
+                      "inputTokenDetails.cacheReadTokens": 7168,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 122,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7690,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 522,
+                      "cacheReadTokens": 7168,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 186,
+                    "outputTokenDetails": {
+                      "textTokens": 122,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 7876,
+                    "raw": {
+                      "input_tokens": 7690,
+                      "input_tokens_details": {
+                        "cached_tokens": 7168
+                      },
+                      "output_tokens": 186,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 7168
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "11",
+                    "actual": "11",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 3309.2371209999983
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8549,
+                      "outputTokens": 1959,
+                      "totalTokens": 10508,
+                      "reasoningTokens": 960,
+                      "cachedInputTokens": 8064,
+                      "inputTokenDetails.noCacheTokens": 485,
+                      "inputTokenDetails.cacheReadTokens": 8064,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 999,
+                      "outputTokenDetails.reasoningTokens": 960
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8549,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 485,
+                      "cacheReadTokens": 8064,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 1959,
+                    "outputTokenDetails": {
+                      "textTokens": 999,
+                      "reasoningTokens": 960
+                    },
+                    "totalTokens": 10508,
+                    "raw": {
+                      "input_tokens": 8549,
+                      "input_tokens_details": {
+                        "cached_tokens": 8064
+                      },
+                      "output_tokens": 1959,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 960
+                      }
+                    },
+                    "reasoningTokens": 960,
+                    "cachedInputTokens": 8064
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "11",
+                    "actual": "11",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 10838.09212700001
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 9080,
+                      "outputTokens": 177,
+                      "totalTokens": 9257,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 8832,
+                      "inputTokenDetails.noCacheTokens": 248,
+                      "inputTokenDetails.cacheReadTokens": 8832,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 113,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 9080,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 248,
+                      "cacheReadTokens": 8832,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 177,
+                    "outputTokenDetails": {
+                      "textTokens": 113,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9257,
+                    "raw": {
+                      "input_tokens": 9080,
+                      "input_tokens_details": {
+                        "cached_tokens": 8832
+                      },
+                      "output_tokens": 177,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 8832
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "11",
+                    "actual": "11",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 2726.217773000004
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "q10": {
+      "summary": {
+        "evaluationCount": 3,
+        "correctCount": 3,
+        "incorrectCount": 0,
+        "missingUsageMetadataCount": 0,
+        "tokenTotals": {
+          "inputTokens": 25385,
+          "outputTokens": 2429,
+          "totalTokens": 27814,
+          "reasoningTokens": 1152,
+          "cachedInputTokens": 24192,
+          "inputTokenDetails.noCacheTokens": 1193,
+          "inputTokenDetails.cacheReadTokens": 24192,
+          "inputTokenDetails.cacheWriteTokens": null,
+          "outputTokenDetails.textTokens": 1277,
+          "outputTokenDetails.reasoningTokens": 1152
+        },
+        "tokenFieldReportCounts": {
+          "inputTokens": 3,
+          "outputTokens": 3,
+          "totalTokens": 3,
+          "reasoningTokens": 3,
+          "cachedInputTokens": 3,
+          "inputTokenDetails.noCacheTokens": 3,
+          "inputTokenDetails.cacheReadTokens": 3,
+          "inputTokenDetails.cacheWriteTokens": 0,
+          "outputTokenDetails.textTokens": 3,
+          "outputTokenDetails.reasoningTokens": 3
+        }
+      },
+      "question": {
+        "id": "q10",
+        "dataset": "tabular",
+        "type": "field-retrieval",
+        "prompt": "Is Marvin Schaefer an active employee?",
+        "expected": "yes"
+      },
+      "datasets": {
+        "tabular": {
+          "summary": {
+            "evaluationCount": 3,
+            "correctCount": 3,
+            "incorrectCount": 0,
+            "missingUsageMetadataCount": 0,
+            "tokenTotals": {
+              "inputTokens": 25385,
+              "outputTokens": 2429,
+              "totalTokens": 27814,
+              "reasoningTokens": 1152,
+              "cachedInputTokens": 24192,
+              "inputTokenDetails.noCacheTokens": 1193,
+              "inputTokenDetails.cacheReadTokens": 24192,
+              "inputTokenDetails.cacheWriteTokens": null,
+              "outputTokenDetails.textTokens": 1277,
+              "outputTokenDetails.reasoningTokens": 1152
+            },
+            "tokenFieldReportCounts": {
+              "inputTokens": 3,
+              "outputTokens": 3,
+              "totalTokens": 3,
+              "reasoningTokens": 3,
+              "cachedInputTokens": 3,
+              "inputTokenDetails.noCacheTokens": 3,
+              "inputTokenDetails.cacheReadTokens": 3,
+              "inputTokenDetails.cacheWriteTokens": 0,
+              "outputTokenDetails.textTokens": 3,
+              "outputTokenDetails.reasoningTokens": 3
+            }
+          },
+          "models": {
+            "o3-mini": {
+              "summary": {
+                "evaluationCount": 3,
+                "correctCount": 3,
+                "incorrectCount": 0,
+                "missingUsageMetadataCount": 0,
+                "tokenTotals": {
+                  "inputTokens": 25385,
+                  "outputTokens": 2429,
+                  "totalTokens": 27814,
+                  "reasoningTokens": 1152,
+                  "cachedInputTokens": 24192,
+                  "inputTokenDetails.noCacheTokens": 1193,
+                  "inputTokenDetails.cacheReadTokens": 24192,
+                  "inputTokenDetails.cacheWriteTokens": null,
+                  "outputTokenDetails.textTokens": 1277,
+                  "outputTokenDetails.reasoningTokens": 1152
+                },
+                "tokenFieldReportCounts": {
+                  "inputTokens": 3,
+                  "outputTokens": 3,
+                  "totalTokens": 3,
+                  "reasoningTokens": 3,
+                  "cachedInputTokens": 3,
+                  "inputTokenDetails.noCacheTokens": 3,
+                  "inputTokenDetails.cacheReadTokens": 3,
+                  "inputTokenDetails.cacheWriteTokens": 0,
+                  "outputTokenDetails.textTokens": 3,
+                  "outputTokenDetails.reasoningTokens": 3
+                }
+              },
+              "objectNotations": {
+                "toon": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 7712,
+                      "outputTokens": 67,
+                      "totalTokens": 7779,
+                      "reasoningTokens": 0,
+                      "cachedInputTokens": 7168,
+                      "inputTokenDetails.noCacheTokens": 544,
+                      "inputTokenDetails.cacheReadTokens": 7168,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 67,
+                      "outputTokenDetails.reasoningTokens": 0
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 7712,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 544,
+                      "cacheReadTokens": 7168,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 67,
+                    "outputTokenDetails": {
+                      "textTokens": 67,
+                      "reasoningTokens": 0
+                    },
+                    "totalTokens": 7779,
+                    "raw": {
+                      "input_tokens": 7712,
+                      "input_tokens_details": {
+                        "cached_tokens": 7168
+                      },
+                      "output_tokens": 67,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 0
+                      }
+                    },
+                    "reasoningTokens": 0,
+                    "cachedInputTokens": 7168
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "yes",
+                    "actual": "true",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 1212.0999020000017
+                },
+                "tron": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 8571,
+                      "outputTokens": 2213,
+                      "totalTokens": 10784,
+                      "reasoningTokens": 1088,
+                      "cachedInputTokens": 8064,
+                      "inputTokenDetails.noCacheTokens": 507,
+                      "inputTokenDetails.cacheReadTokens": 8064,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 1125,
+                      "outputTokenDetails.reasoningTokens": 1088
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 8571,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 507,
+                      "cacheReadTokens": 8064,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 2213,
+                    "outputTokenDetails": {
+                      "textTokens": 1125,
+                      "reasoningTokens": 1088
+                    },
+                    "totalTokens": 10784,
+                    "raw": {
+                      "input_tokens": 8571,
+                      "input_tokens_details": {
+                        "cached_tokens": 8064
+                      },
+                      "output_tokens": 2213,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 1088
+                      }
+                    },
+                    "reasoningTokens": 1088,
+                    "cachedInputTokens": 8064
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "yes",
+                    "actual": "1",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 9324.322101000027
+                },
+                "jton": {
+                  "summary": {
+                    "evaluationCount": 1,
+                    "correctCount": 1,
+                    "incorrectCount": 0,
+                    "missingUsageMetadataCount": 0,
+                    "tokenTotals": {
+                      "inputTokens": 9102,
+                      "outputTokens": 149,
+                      "totalTokens": 9251,
+                      "reasoningTokens": 64,
+                      "cachedInputTokens": 8960,
+                      "inputTokenDetails.noCacheTokens": 142,
+                      "inputTokenDetails.cacheReadTokens": 8960,
+                      "inputTokenDetails.cacheWriteTokens": null,
+                      "outputTokenDetails.textTokens": 85,
+                      "outputTokenDetails.reasoningTokens": 64
+                    },
+                    "tokenFieldReportCounts": {
+                      "inputTokens": 1,
+                      "outputTokens": 1,
+                      "totalTokens": 1,
+                      "reasoningTokens": 1,
+                      "cachedInputTokens": 1,
+                      "inputTokenDetails.noCacheTokens": 1,
+                      "inputTokenDetails.cacheReadTokens": 1,
+                      "inputTokenDetails.cacheWriteTokens": 0,
+                      "outputTokenDetails.textTokens": 1,
+                      "outputTokenDetails.reasoningTokens": 1
+                    }
+                  },
+                  "usageMetadata": {
+                    "inputTokens": 9102,
+                    "inputTokenDetails": {
+                      "noCacheTokens": 142,
+                      "cacheReadTokens": 8960,
+                      "cacheWriteTokens": null
+                    },
+                    "outputTokens": 149,
+                    "outputTokenDetails": {
+                      "textTokens": 85,
+                      "reasoningTokens": 64
+                    },
+                    "totalTokens": 9251,
+                    "raw": {
+                      "input_tokens": 9102,
+                      "input_tokens_details": {
+                        "cached_tokens": 8960
+                      },
+                      "output_tokens": 149,
+                      "output_tokens_details": {
+                        "reasoning_tokens": 64
+                      }
+                    },
+                    "reasoningTokens": 64,
+                    "cachedInputTokens": 8960
+                  },
+                  "usageMetadataSource": "llm-api-usage",
+                  "answer": {
+                    "expected": "yes",
+                    "actual": "true",
+                    "isCorrect": true
+                  },
+                  "latencyMs": 1578.1063579999973
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

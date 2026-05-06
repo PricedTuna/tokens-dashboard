@@ -37,7 +37,10 @@ function flattenData(data) {
             model: modelKey,
             format: formatKey,
             correct: format.answer.isCorrect,
-            tokens: format.usageMetadata.totalTokens,
+            totalTokens: format.usageMetadata.totalTokens,
+            inputTokens: format.usageMetadata.inputTokens || 0,
+            outputTokens: format.usageMetadata.outputTokens || 0,
+            reasoningTokens: format.usageMetadata.outputTokenDetails?.reasoningTokens || format.usageMetadata.reasoningTokens || 0,
             latency: format.latencyMs
           });
         }
@@ -107,7 +110,7 @@ function renderTable(data) {
       <td>${d.model}</td>
       <td>${d.format}</td>
       <td>${d.correct ? "✔" : "✖"}</td>
-      <td>${d.tokens}</td>
+      <td>${d.totalTokens}</td>
       <td>${Math.round(d.latency)}</td>
     `;
 
@@ -119,35 +122,55 @@ function renderKPIs(data, totalData) {
   const total = data.length;
 
   const accuracy = data.filter(d => d.correct).length / total;
-  const tokens = data.reduce((a, b) => a + b.tokens, 0);
+  const tokens = data.reduce((a, b) => a + b.totalTokens, 0);
   const latency = data.reduce((a, b) => a + b.latency, 0) / total;
 
-  const models = [...new Set(totalData.map(d => d.model))];
+const models = [...new Set(totalData.map(d => d.model))];
   const tbody = document.querySelector("#tokenTable tbody");
   tbody.innerHTML = "";
 
-  let totalTron = 0, totalToon = 0, totalJton = 0;
+  let grandTotal = 0;
+  let totals = { tron: 0, toon: 0, jton: 0 };
+  let inputTotals = { tron: 0, toon: 0, jton: 0 };
+  let outputTotals = { tron: 0, toon: 0, jton: 0 };
+  let reasoningTotals = { tron: 0, toon: 0, jton: 0 };
 
   models.forEach(model => {
     const modelData = totalData.filter(d => d.model === model);
-    const tronData = modelData.filter(d => d.format === "tron");
-    const toonData = modelData.filter(d => d.format === "toon");
-    const jtonData = modelData.filter(d => d.format === "jton");
+    const getTokens = (arr) => ({
+      input: arr.reduce((a, b) => a + b.inputTokens, 0),
+      output: arr.reduce((a, b) => a + b.outputTokens, 0),
+      reasoning: arr.reduce((a, b) => a + b.reasoningTokens, 0),
+      total: arr.reduce((a, b) => a + b.totalTokens, 0)
+    });
 
-    const tron = tronData.length ? tronData.reduce((a, b) => a + b.tokens, 0) : "--";
-    const toon = toonData.length ? toonData.reduce((a, b) => a + b.tokens, 0) : "--";
-    const jton = jtonData.length ? jtonData.reduce((a, b) => a + b.tokens, 0) : "--";
+    const tronTokens = getTokens(modelData.filter(d => d.format === "tron"));
+    const toonTokens = getTokens(modelData.filter(d => d.format === "toon"));
+    const jtonTokens = getTokens(modelData.filter(d => d.format === "jton"));
 
-    if (tron !== "--") totalTron += tron;
-    if (toon !== "--") totalToon += toon;
-    if (jton !== "--") totalJton += jton;
+    const modelTotal = tronTokens.total + toonTokens.total + jtonTokens.total;
+    grandTotal += modelTotal;
+
+    inputTotals.tron += tronTokens.input;
+    inputTotals.toon += toonTokens.input;
+    inputTotals.jton += jtonTokens.input;
+    outputTotals.tron += tronTokens.output;
+    outputTotals.toon += toonTokens.output;
+    outputTotals.jton += jtonTokens.output;
+    reasoningTotals.tron += tronTokens.reasoning;
+    reasoningTotals.toon += toonTokens.reasoning;
+    reasoningTotals.jton += jtonTokens.reasoning;
+    totals.tron += tronTokens.total;
+    totals.toon += toonTokens.total;
+    totals.jton += jtonTokens.total;
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${model}</td>
-      <td>${tron}</td>
-      <td>${toon}</td>
-      <td>${jton}</td>
+      <td><strong>${model}</strong></td>
+      <td>${tronTokens.input || "-"}</td><td>${tronTokens.output || "-"}</td><td>${tronTokens.reasoning || "-"}</td><td><strong>${tronTokens.total || "-"}</strong></td>
+      <td>${toonTokens.input || "-"}</td><td>${toonTokens.output || "-"}</td><td>${toonTokens.reasoning || "-"}</td><td><strong>${toonTokens.total || "-"}</strong></td>
+      <td>${jtonTokens.input || "-"}</td><td>${jtonTokens.output || "-"}</td><td>${jtonTokens.reasoning || "-"}</td><td><strong>${jtonTokens.total || "-"}</strong></td>
+      <td><strong>${modelTotal}</strong></td>
     `;
     tbody.appendChild(tr);
   });
@@ -155,9 +178,10 @@ function renderKPIs(data, totalData) {
   const totalRow = document.createElement("tr");
   totalRow.innerHTML = `
     <td><strong>Total</strong></td>
-    <td><strong>${totalTron || "--"}</strong></td>
-    <td><strong>${totalToon || "--"}</strong></td>
-    <td><strong>${totalJton || "--"}</strong></td>
+    <td><strong>${inputTotals.tron}</strong></td><td><strong>${outputTotals.tron}</strong></td><td><strong>${reasoningTotals.tron}</strong></td><td><strong>${totals.tron}</strong></td>
+    <td><strong>${inputTotals.toon}</strong></td><td><strong>${outputTotals.toon}</strong></td><td><strong>${reasoningTotals.toon}</strong></td><td><strong>${totals.toon}</strong></td>
+    <td><strong>${inputTotals.jton}</strong></td><td><strong>${outputTotals.jton}</strong></td><td><strong>${reasoningTotals.jton}</strong></td><td><strong>${totals.jton}</strong></td>
+    <td><strong>${grandTotal}</strong></td>
   `;
   tbody.insertBefore(totalRow, tbody.firstChild);
 

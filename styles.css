@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+header {
+  padding: 20px;
+  background: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+#filters {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+select {
+  padding: 8px;
+  background: #1e293b;
+  color: white;
+  border: none;
+}
+
+#kpis {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background: #334155;
+}
+
+tbody tr:nth-child(even) {
+  background: #1e293b;
+}

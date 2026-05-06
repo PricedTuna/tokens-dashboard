@@ -1,83 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>JSON Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header>
-  <h1>Metadata Dashboard</h1>
-  <input type="file" id="fileInput" accept=".json">
-</header>
-
-<section id="tokenCounts">
-  <h3>Tokens por Object Notation</h3>
-  <table id="tokenTable">
-    <thead>
-      <tr>
-        <th rowspan="2">LLM</th>
-        <th colspan="4">TRON</th>
-        <th colspan="4">TOON</th>
-        <th colspan="4">JTON</th>
-        <th rowspan="2">Total</th>
-      </tr>
-      <tr>
-        <th>Input</th><th>Output</th><th>Reasoning</th><th>Total</th>
-        <th>Input</th><th>Output</th><th>Reasoning</th><th>Total</th>
-        <th>Input</th><th>Output</th><th>Reasoning</th><th>Total</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</section>
-
-<section id="filters">
-  <select id="questionFilter">
-    <option value="">Todas las preguntas</option>
-  </select>
-
-  <select id="modelFilter">
-    <option value="">Todos los modelos</option>
-  </select>
-
-  <select id="formatFilter">
-    <option value="">Todos los formatos</option>
-  </select>
-</section>
-
-<section id="kpis">
-  <div class="card">
-    <h3>Accuracy</h3>
-    <p id="accuracy">-</p>
-  </div>
-  <div class="card">
-    <h3>Total Tokens</h3>
-    <p id="tokens">-</p>
-  </div>
-  <div class="card">
-    <h3>Latency Promedio</h3>
-    <p id="latency">-</p>
-  </div>
-</section>
-
-<section>
-  <table id="table">
-    <thead>
-      <tr>
-        <th>Pregunta</th>
-        <th>Modelo</th>
-        <th>Formato</th>
-        <th>Correcto</th>
-        <th>Tokens</th>
-        <th>Latencia</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</section>
-
-<script src="app.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tokens-dashboard</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

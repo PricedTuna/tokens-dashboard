@@ -13,8 +13,10 @@ fileInput.addEventListener("change", async (e) => {
   const json = JSON.parse(text);
 
   rawData = json;
+  selectedFormats = [];
 
   renderSummary(json);
+  renderComparison();
   renderTable(json);
 });
 
@@ -28,6 +30,13 @@ document.getElementById("sortBtn")?.addEventListener("click", () => {
 });
 
 let currentSortOrder = "desc";
+let selectedFormats = [];
+
+document.getElementById("clearComparisonBtn")?.addEventListener("click", () => {
+  selectedFormats = [];
+  renderSummary(rawData);
+  renderComparison();
+});
 
 searchInput.addEventListener("input", () => {
   const value = searchInput.value.toLowerCase();
@@ -120,7 +129,17 @@ function renderSummary(data, sortBy = "total") {
     ).toFixed(2);
 
     const card = document.createElement("div");
-    card.className = "summary-card";
+    card.className = `summary-card ${selectedFormats.includes(format) ? "selected" : ""}`;
+
+    card.addEventListener("click", () => {
+      if (selectedFormats.includes(format)) {
+        selectedFormats = selectedFormats.filter(f => f !== format);
+      } else {
+        selectedFormats.push(format);
+      }
+      renderSummary(data, sortBy);
+      renderComparison();
+    });
 
     card.innerHTML = `
       <div class="card-title">${format.toUpperCase()}</div>
@@ -169,6 +188,82 @@ function renderSummary(data, sortBy = "total") {
     `;
 
     summaryContainer.appendChild(card);
+  });
+}
+
+function renderComparison() {
+  const comparisonSection = document.getElementById("comparisonSection");
+  const comparisonContainer = document.getElementById("comparisonContainer");
+
+  if (selectedFormats.length === 0) {
+    comparisonSection.style.display = "none";
+    return;
+  }
+
+  comparisonSection.style.display = "block";
+  comparisonContainer.innerHTML = "";
+
+  // Group data for selected formats
+  const grouped = {};
+  rawData.forEach((item) => {
+    if (selectedFormats.includes(item.format)) {
+      if (!grouped[item.format]) {
+        grouped[item.format] = {
+          total: 0,
+          input: 0,
+          output: 0,
+        };
+      }
+      grouped[item.format].total += (item.inputTokens || 0) + (item.outputTokens || 0);
+      grouped[item.format].input += item.inputTokens || 0;
+      grouped[item.format].output += item.outputTokens || 0;
+    }
+  });
+
+  const selectedStats = Object.entries(grouped).map(([name, stats]) => ({
+    name,
+    ...stats
+  }));
+
+  // Find the "best" (lowest total tokens) to use as baseline
+  const best = [...selectedStats].sort((a, b) => a.total - b.total)[0];
+
+  selectedStats.forEach((stats) => {
+    const card = document.createElement("div");
+    card.className = "comparison-card";
+
+    const isBest = stats.name === best.name;
+    const totalDiff = stats.total - best.total;
+    const inputDiff = stats.input - best.input;
+    const outputDiff = stats.output - best.output;
+
+    card.innerHTML = `
+      ${isBest ? '<div class="comparison-rank">🏆 Más eficiente</div>' : '<div class="comparison-rank" style="background:#eee">Comparación</div>'}
+      <h3>${stats.name.toUpperCase()}</h3>
+      
+      <div class="comparison-metric">
+        <div class="metric-label">Total Tokens</div>
+        <div class="metric-value" style="font-size:20px">${formatNumber(stats.total)} 
+          ${!isBest ? `<span class="comparison-diff diff-positive">+${formatNumber(totalDiff)}</span>` : '<span class="comparison-diff diff-negative">Base</span>'}
+        </div>
+      </div>
+
+      <div class="comparison-metric">
+        <div class="metric-label">Input Tokens</div>
+        <div class="metric-value" style="font-size:16px">${formatNumber(stats.input)} 
+          ${!isBest ? `<span class="comparison-diff ${inputDiff >= 0 ? 'diff-positive' : 'diff-negative'}">${inputDiff >= 0 ? '+' : ''}${formatNumber(inputDiff)}</span>` : ''}
+        </div>
+      </div>
+
+      <div class="comparison-metric">
+        <div class="metric-label">Output Tokens</div>
+        <div class="metric-value" style="font-size:16px">${formatNumber(stats.output)} 
+          ${!isBest ? `<span class="comparison-diff ${outputDiff >= 0 ? 'diff-positive' : 'diff-negative'}">${outputDiff >= 0 ? '+' : ''}${formatNumber(outputDiff)}</span>` : ''}
+        </div>
+      </div>
+    `;
+
+    comparisonContainer.appendChild(card);
   });
 }
 

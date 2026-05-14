@@ -1,13 +1,64 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tokens-dashboard</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Token Dashboard</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>LLM Evaluation Dashboard</h1>
+      <p>
+        Carga un archivo JSON con resultados de evaluación.
+      </p>
+    </header>
+
+    <section class="upload-section">
+      <input type="file" id="fileInput" accept=".json" />
+    </section>
+
+    <section id="summaryContainer" class="summary-grid"></section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Detalles</h2>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar formato, modelo, questionId..."
+        />
+      </div>
+
+      <div class="table-wrapper">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Formato</th>
+              <th>Modelo</th>
+              <th>Correcto</th>
+              <th>Input</th>
+              <th>Output</th>
+              <th>Total</th>
+              <th>No Cache</th>
+              <th>Cache Read</th>
+              <th>Cache Write</th>
+              <th>Text</th>
+              <th>Reasoning</th>
+              <th>Latency</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

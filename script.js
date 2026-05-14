@@ -300,3 +300,91 @@ function formatNumber(value) {
 
   return Number(value).toLocaleString();
 }
+
+// Animaciones con anime.js para interacciones
+let isFirstRender = true;
+
+// Hover en botones
+document.querySelectorAll('.miro-button, .custom-file-upload').forEach(btn => {
+  btn.addEventListener('mouseenter', () => {
+    anime({
+      targets: btn,
+      scale: 1.15,
+      duration: 100,
+      easing: 'easeOutQuad'
+    });
+  });
+  btn.addEventListener('mouseleave', () => {
+    anime({
+      targets: btn,
+      scale: 1,
+      duration: 100,
+      easing: 'easeOutQuad'
+    });
+  });
+});
+
+// Selección de cards
+summaryContainer.addEventListener('click', (e) => {
+  const card = e.target.closest('.summary-card');
+  if (!card) return;
+  
+  const isSelected = selectedFormats.includes(card.querySelector('.card-title').textContent.trim());
+  
+  anime({
+    targets: card,
+    scale: isSelected ? [1, 1.1, 1] : 1,
+    duration: 150,
+    easing: 'easeOutQuad'
+  });
+});
+
+// Función para mostrar elementos con CSS transition
+function showElements(selector, className, delay = 50) {
+  setTimeout(() => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((el, i) => {
+      setTimeout(() => el.classList.add(className), i * 80);
+    });
+  }, delay);
+}
+
+// Wrap render functions para añadir animación - asegurar visible siempre
+const originalRenderSummary = renderSummary;
+renderSummary = function(data, sortBy) {
+  originalRenderSummary(data, sortBy);
+  if (isFirstRender) {
+    showElements('.summary-card', 'visible', 100);
+    isFirstRender = false;
+  } else {
+    // En re-renders, asegurar que todos tengan visible
+    document.querySelectorAll('.summary-card').forEach(card => {
+      card.classList.add('visible');
+    });
+  }
+};
+
+const originalRenderComparison = renderComparison;
+renderComparison = function() {
+  originalRenderComparison();
+  if (isFirstRender) {
+    showElements('.comparison-card', 'visible', 100);
+    isFirstRender = false;
+  } else {
+    document.querySelectorAll('.comparison-card').forEach(card => {
+      card.classList.add('visible');
+    });
+  }
+};
+
+const originalRenderTable = renderTable;
+renderTable = function(data) {
+  originalRenderTable(data);
+  if (isFirstRender) {
+    showElements('#resultsTable tbody tr', 'visible', 50);
+  } else {
+    document.querySelectorAll('#resultsTable tbody tr').forEach(row => {
+      row.classList.add('visible');
+    });
+  }
+};

@@ -152,6 +152,8 @@ section {
 }
 
 .summary-card {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
   background: var(--card-bg);
   border: 2px solid var(--border);
   padding: 24px;
@@ -160,7 +162,12 @@ section {
   gap: 20px;
   cursor: pointer;
   position: relative;
-  transition: transform 0.1s;
+  transition: opacity 0.2s cubic-bezier(0.25, 1, 0.5, 1), transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.1s;
+}
+
+.summary-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .summary-card:hover {
@@ -277,9 +284,17 @@ section {
 }
 
 .comparison-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
   background: white;
   border: 2px solid var(--border);
   padding: 20px;
+  transition: opacity 0.2s cubic-bezier(0.25, 1, 0.5, 1), transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.comparison-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .comparison-card h3 {
@@ -381,6 +396,17 @@ tr:last-child td {
 
 tr:hover td {
   background-color: var(--hover-bg);
+}
+
+#resultsTable tbody tr {
+  opacity: 0;
+  transform: translateX(-40px) scale(0.98);
+  transition: opacity 0.15s cubic-bezier(0.25, 1, 0.5, 1), transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#resultsTable tbody tr.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
 }
 
 .correct {

@@ -18,6 +18,17 @@ fileInput.addEventListener("change", async (e) => {
   renderTable(json);
 });
 
+document.getElementById("sortBtn")?.addEventListener("click", () => {
+  currentSortOrder = currentSortOrder === "desc" ? "asc" : "desc";
+  const btn = document.getElementById("sortBtn");
+  btn.textContent = currentSortOrder === "desc" 
+    ? "Total Tokens ↓" 
+    : "Total Tokens ↑";
+  renderSummary(rawData);
+});
+
+let currentSortOrder = "desc";
+
 searchInput.addEventListener("input", () => {
   const value = searchInput.value.toLowerCase();
 
@@ -32,7 +43,7 @@ searchInput.addEventListener("input", () => {
   renderTable(filtered);
 });
 
-function renderSummary(data) {
+function renderSummary(data, sortBy = "total") {
   summaryContainer.innerHTML = "";
 
   const grouped = {};
@@ -42,6 +53,7 @@ function renderSummary(data) {
       grouped[item.format] = {
         inputTokens: 0,
         outputTokens: 0,
+        totalTokens: 0,
 
         inputDetails: {
           noCacheTokens: 0,
@@ -63,6 +75,7 @@ function renderSummary(data) {
 
     group.inputTokens += item.inputTokens || 0;
     group.outputTokens += item.outputTokens || 0;
+    group.totalTokens += (item.inputTokens || 0) + (item.outputTokens || 0);
 
     group.inputDetails.noCacheTokens +=
       item.inputTokensDetails?.noCacheTokens || 0;
@@ -86,7 +99,21 @@ function renderSummary(data) {
     }
   });
 
-  Object.entries(grouped).forEach(([format, stats]) => {
+  const entries = Object.entries(grouped);
+
+  if (sortBy === "total") {
+    entries.sort((a, b) => {
+      return currentSortOrder === "desc" 
+        ? b[1].totalTokens - a[1].totalTokens 
+        : a[1].totalTokens - b[1].totalTokens;
+    });
+  } else if (sortBy === "input") {
+    entries.sort((a, b) => b[1].inputTokens - a[1].inputTokens);
+  } else if (sortBy === "output") {
+    entries.sort((a, b) => b[1].outputTokens - a[1].outputTokens);
+  }
+
+  entries.forEach(([format, stats]) => {
     const accuracy = (
       (stats.totalCorrect / stats.totalQuestions) *
       100
@@ -96,17 +123,12 @@ function renderSummary(data) {
     card.className = "summary-card";
 
     card.innerHTML = `
-      <h2>${format.toUpperCase()}</h2>
+      <div class="card-title">${format.toUpperCase()}</div>
 
       <div class="metrics">
         <div class="metric">
-          <div class="metric-label">Total Input Tokens</div>
-          <div class="metric-value">${formatNumber(stats.inputTokens)}</div>
-        </div>
-
-        <div class="metric">
-          <div class="metric-label">Total Output Tokens</div>
-          <div class="metric-value">${formatNumber(stats.outputTokens)}</div>
+          <div class="metric-label">Total Tokens</div>
+          <div class="metric-value total-tokens">${formatNumber(stats.totalTokens)}</div>
         </div>
 
         <div class="metric">
@@ -116,50 +138,33 @@ function renderSummary(data) {
       </div>
 
       <div class="details-block">
-
         <div class="details-group">
-          <h3>Input Details</h3>
-
+          <h3>Input</h3>
           <div class="details-item">
             <span>No Cache</span>
-            <strong>${formatNumber(
-              stats.inputDetails.noCacheTokens
-            )}</strong>
+            <strong>${formatNumber(stats.inputDetails.noCacheTokens)}</strong>
           </div>
-
           <div class="details-item">
-            <span>Cache Read</span>
-            <strong>${formatNumber(
-              stats.inputDetails.cacheReadTokens
-            )}</strong>
+            <span>Cache R</span>
+            <strong>${formatNumber(stats.inputDetails.cacheReadTokens)}</strong>
           </div>
-
           <div class="details-item">
-            <span>Cache Write</span>
-            <strong>${formatNumber(
-              stats.inputDetails.cacheWriteTokens
-            )}</strong>
+            <span>Cache W</span>
+            <strong>${formatNumber(stats.inputDetails.cacheWriteTokens)}</strong>
           </div>
         </div>
 
         <div class="details-group">
-          <h3>Output Details</h3>
-
+          <h3>Output</h3>
           <div class="details-item">
-            <span>Text Tokens</span>
-            <strong>${formatNumber(
-              stats.outputDetails.textTokens
-            )}</strong>
+            <span>Text</span>
+            <strong>${formatNumber(stats.outputDetails.textTokens)}</strong>
           </div>
-
           <div class="details-item">
-            <span>Reasoning Tokens</span>
-            <strong>${formatNumber(
-              stats.outputDetails.reasoningTokens
-            )}</strong>
+            <span>Reason</span>
+            <strong>${formatNumber(stats.outputDetails.reasoningTokens)}</strong>
           </div>
         </div>
-
       </div>
     `;
 
@@ -177,36 +182,18 @@ function renderTable(data) {
       <td>${item.questionId}</td>
       <td>${item.format}</td>
       <td>${item.model}</td>
-
       <td class="${item.isCorrect ? "correct" : "incorrect"}">
-        ${item.isCorrect ? "✔" : "✘"}
+        ${item.isCorrect ? "✔ Correct" : "✘ Incorrect"}
       </td>
-
       <td>${formatNumber(item.inputTokens)}</td>
       <td>${formatNumber(item.outputTokens)}</td>
-      <td>${formatNumber(item.totalTokens)}</td>
-
-      <td>${formatNumber(
-        item.inputTokensDetails?.noCacheTokens
-      )}</td>
-
-      <td>${formatNumber(
-        item.inputTokensDetails?.cacheReadTokens
-      )}</td>
-
-      <td>${formatNumber(
-        item.inputTokensDetails?.cacheWriteTokens
-      )}</td>
-
-      <td>${formatNumber(
-        item.outputTokensDetails?.textTokens
-      )}</td>
-
-      <td>${formatNumber(
-        item.outputTokensDetails?.reasoningTokens
-      )}</td>
-
-      <td>${Math.round(item.latencyMs)} ms</td>
+      <td><strong>${formatNumber(item.totalTokens)}</strong></td>
+      <td>${formatNumber(item.inputTokensDetails?.noCacheTokens)}</td>
+      <td>${formatNumber(item.inputTokensDetails?.cacheReadTokens)}</td>
+      <td>${formatNumber(item.inputTokensDetails?.cacheWriteTokens)}</td>
+      <td>${formatNumber(item.outputTokensDetails?.textTokens)}</td>
+      <td>${formatNumber(item.outputTokensDetails?.reasoningTokens)}</td>
+      <td>${Math.round(item.latencyMs)}ms</td>
     `;
 
     tableBody.appendChild(tr);

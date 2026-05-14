@@ -4,60 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LLM Token Dashboard</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="grid-background"></div>
+  
+  <main class="container">
     <header class="header">
-      <h1>LLM Evaluation Dashboard</h1>
-      <p>
-        Carga un archivo JSON con resultados de evaluación.
-      </p>
+      <div class="header-content">
+        <h1>LLM Token Dashboard</h1>
+        <p>Visualiza y compara el consumo de tokens de tus evaluaciones.</p>
+      </div>
+      <div class="upload-area">
+        <label for="fileInput" class="custom-file-upload">
+          Cargar JSON
+        </label>
+        <input type="file" id="fileInput" accept=".json" />
+      </div>
     </header>
 
-    <section class="upload-section">
-      <input type="file" id="fileInput" accept=".json" />
+    <section class="summary-section">
+      <div class="section-header">
+        <h2>Resumen por Formato</h2>
+        <button id="sortBtn" class="miro-button">Total Tokens ↓</button>
+      </div>
+      <div id="summaryContainer" class="summary-grid"></div>
     </section>
 
-    <section id="summaryContainer" class="summary-grid"></section>
-
-    <section class="table-section">
-      <div class="table-header">
+    <section class="details-section">
+      <div class="section-header">
         <h2>Detalles</h2>
-
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Buscar formato, modelo, questionId..."
-        />
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar..."
+          />
+        </div>
       </div>
 
-      <div class="table-wrapper">
-        <table id="resultsTable">
-          <thead>
-            <tr>
-              <th>Question</th>
-              <th>Formato</th>
-              <th>Modelo</th>
-              <th>Correcto</th>
-              <th>Input</th>
-              <th>Output</th>
-              <th>Total</th>
-              <th>No Cache</th>
-              <th>Cache Read</th>
-              <th>Cache Write</th>
-              <th>Text</th>
-              <th>Reasoning</th>
-              <th>Latency</th>
-            </tr>
-          </thead>
-
-          <tbody></tbody>
-        </table>
+      <div class="table-container">
+        <div class="table-wrapper">
+          <table id="resultsTable">
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Formato</th>
+                <th>Modelo</th>
+                <th>Correcto</th>
+                <th>Input</th>
+                <th>Output</th>
+                <th>Total</th>
+                <th>No Cache</th>
+                <th>Cache Read</th>
+                <th>Cache Write</th>
+                <th>Text</th>
+                <th>Reasoning</th>
+                <th>Latency</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </section>
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>

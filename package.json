@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/PricedTuna/tokens-dashboard/issues"
   },
-  "homepage": "https://github.com/PricedTuna/tokens-dashboard#readme",
-  "dependencies": {
-    "animejs": "^4.4.1"
-  }
+  "homepage": "https://github.com/PricedTuna/tokens-dashboard#readme"
 }

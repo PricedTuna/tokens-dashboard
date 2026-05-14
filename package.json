@@ -1,0 +1,23 @@
+{
+  "name": "tokens-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/PricedTuna/tokens-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PricedTuna/tokens-dashboard/issues"
+  },
+  "homepage": "https://github.com/PricedTuna/tokens-dashboard#readme",
+  "dependencies": {
+    "animejs": "^4.4.1"
+  }
+}

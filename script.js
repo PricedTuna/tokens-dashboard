@@ -304,25 +304,7 @@ function formatNumber(value) {
 // Animaciones con anime.js para interacciones
 let isFirstRender = true;
 
-// Hover en botones
-document.querySelectorAll('.miro-button, .custom-file-upload').forEach(btn => {
-  btn.addEventListener('mouseenter', () => {
-    anime({
-      targets: btn,
-      scale: 1.15,
-      duration: 100,
-      easing: 'easeOutQuad'
-    });
-  });
-  btn.addEventListener('mouseleave', () => {
-    anime({
-      targets: btn,
-      scale: 1,
-      duration: 100,
-      easing: 'easeOutQuad'
-    });
-  });
-});
+// Hover en botones - sin animación, sin cambio de color
 
 // Selección de cards
 summaryContainer.addEventListener('click', (e) => {
@@ -333,18 +315,18 @@ summaryContainer.addEventListener('click', (e) => {
   
   anime({
     targets: card,
-    scale: isSelected ? [1, 1.1, 1] : 1,
-    duration: 150,
-    easing: 'easeOutQuad'
+    scale: isSelected ? [1, 1.04, 1] : 1,
+    duration: 60,
+    easing: 'steps(2)'
   });
 });
 
 // Función para mostrar elementos con CSS transition
-function showElements(selector, className, delay = 50) {
+function showElements(selector, className, delay = 30) {
   setTimeout(() => {
     const elements = document.querySelectorAll(selector);
     elements.forEach((el, i) => {
-      setTimeout(() => el.classList.add(className), i * 80);
+      setTimeout(() => el.classList.add(className), i * 30);
     });
   }, delay);
 }

@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Alfa Slab One';
+  src: url('fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg: #ffffff;
   --text: #000000;
@@ -25,7 +39,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -61,9 +75,10 @@ body {
 }
 
 .header h1 {
+  font-family: 'JetBrains Mono', cursive;
   font-size: 48px;
   font-weight: 800;
-  letter-spacing: -1.5px;
+  letter-spacing: -3.5px;
   line-height: 1;
   margin-bottom: 8px;
 }
@@ -87,12 +102,11 @@ body {
   color: white;
   border: 2px solid var(--border);
   font-weight: 600;
-  transition: transform 0.1s, background-color 0.1s;
 }
 
 .custom-file-upload:hover {
-  background-color: #0400cc;
-  transform: translate(-2px, -2px);
+  transform: scale(1.05);
+  background-color: var(--miro-blue);
 }
 
 .custom-file-upload:active {
@@ -133,11 +147,13 @@ section {
   cursor: pointer;
   font-family: inherit;
   font-size: 14px;
-  transition: transform 0.1s;
 }
 
 .miro-button:hover {
-  transform: translate(-2px, -2px);
+  transform: scale(1.05);
+}
+
+.miro-button:hover {
 }
 
 .miro-button:active {
@@ -153,7 +169,7 @@ section {
 
 .summary-card {
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
+  transform: translateY(80px) scale(0.85);
   background: var(--card-bg);
   border: 2px solid var(--border);
   padding: 24px;
@@ -162,7 +178,7 @@ section {
   gap: 20px;
   cursor: pointer;
   position: relative;
-  transition: opacity 0.2s cubic-bezier(0.25, 1, 0.5, 1), transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.1s;
+  transition: opacity 0.1s steps(2), transform 0.1s steps(2);
 }
 
 .summary-card.visible {
@@ -285,11 +301,11 @@ section {
 
 .comparison-card {
   opacity: 0;
-  transform: translateY(40px) scale(0.95);
+  transform: translateY(35px) scale(0.92);
   background: white;
   border: 2px solid var(--border);
   padding: 20px;
-  transition: opacity 0.2s cubic-bezier(0.25, 1, 0.5, 1), transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: opacity 0.12s steps(3), transform 0.12s steps(3);
 }
 
 .comparison-card.visible {
@@ -400,8 +416,8 @@ tr:hover td {
 
 #resultsTable tbody tr {
   opacity: 0;
-  transform: translateX(-40px) scale(0.98);
-  transition: opacity 0.15s cubic-bezier(0.25, 1, 0.5, 1), transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateX(-30px) scale(0.96);
+  transition: opacity 0.1s steps(3), transform 0.1s steps(3);
 }
 
 #resultsTable tbody tr.visible {

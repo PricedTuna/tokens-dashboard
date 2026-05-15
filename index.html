@@ -15,8 +15,8 @@
         <h1>Visualizador de consumo de tokens</h1>
         <p>Visualiza y compara el consumo de tokens de tus evaluaciones.</p>
       </div>
-      <div class="upload-area">
-        <label for="fileInput" class="custom-file-upload">
+      <div class="section-header">
+        <label for="fileInput" class="miro-button" id="upload-json-btn">
           Cargar JSON
         </label>
         <input type="file" id="fileInput" accept=".json" />
@@ -34,8 +34,7 @@
     <section id="comparisonSection" class="comparison-section" style="display: none;">
       <div class="section-header">
         <h2>Comparación</h2>
-        <button id="clearComparisonBtn" class="miro-button"
-          style="background: var(--miro-pink); color: white;">Limpiar</button>
+        <button id="clearComparisonBtn" class="miro-button">Limpiar</button>
       </div>
       <div id="comparisonContainer" class="comparison-grid"></div>
     </section>

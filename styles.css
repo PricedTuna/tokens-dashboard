@@ -1,13 +1,22 @@
+:root {
+  --bg: #ffd84d;
+  --border: #111;
+  --text: #111;
+
+  --shadow-x: 6px;
+  --shadow-y: 6px;
+}
+
 @font-face {
-  font-family: 'Alfa Slab One';
-  src: url('fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf') format('truetype');
+  font-family: "Alfa Slab One";
+  src: url("fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,19 +26,19 @@
   --text: #000000;
   --border: #000000;
   --grid: #e5e5e5;
-  
+
   /* Miro Colors */
-  --miro-yellow: #FFD029;
-  --miro-blue: #0500FF;
-  --miro-green: #42B883;
-  --miro-pink: #EA4C89;
-  --miro-orange: #FF7233;
-  
+  --miro-yellow: #ffd029;
+  --miro-blue: #0500ff;
+  --miro-green: #42b883;
+  --miro-pink: #ea4c89;
+  --miro-orange: #ff7233;
+
   --card-bg: #ffffff;
   --hover-bg: #f2f2f2;
-  
-  --success: #42B883;
-  --danger: #EA4C89;
+
+  --success: #42b883;
+  --danger: #ea4c89;
 }
 
 * {
@@ -39,7 +48,11 @@
 }
 
 body {
-  font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "JetBrains Mono",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -75,7 +88,7 @@ body {
 }
 
 .header h1 {
-  font-family: 'JetBrains Mono', cursive;
+  font-family: "JetBrains Mono", cursive;
   font-size: 48px;
   font-weight: 800;
   letter-spacing: -3.5px;
@@ -94,22 +107,22 @@ body {
   margin-bottom: 4px;
 }
 
-.custom-file-upload {
-  display: inline-block;
-  padding: 12px 24px;
-  cursor: pointer;
-  background: var(--miro-blue);
-  color: white;
-  border: 2px solid var(--border);
-  font-weight: 600;
-  transition: all 13ms linear;
-}
+/* .custom-file-upload { */
+  /* display: inline-block; */
+  /* padding: 12px 24px; */
+  /* cursor: pointer; */
+  /* background: var(--miro-blue); */
+  /* color: white; */
+  /* border: 2px solid var(--border); */
+  /* font-weight: 600; */
+  /* transition: all 13ms linear; */
+/* } */
 
-.custom-file-upload:hover {
-  border: 3px solid var(--border);
-  border-right: 12px solid var(--border);
-  border-bottom: 10px solid var(--border);
-}
+/* .custom-file-upload:hover { */
+  /* border: 3px solid var(--border); */
+  /* border-right: 12px solid var(--border); */
+  /* border-bottom: 10px solid var(--border); */
+/* } */
 
 .custom-file-upload:active {
   transform: translate(0, 0);
@@ -140,26 +153,58 @@ section {
 }
 
 /* Buttons */
-.miro-button {
-  background: var(--miro-yellow);
+#upload-json-btn {
+  background-color: var(--miro-blue);
+  color: white;
+}
+
+#sortBtn {
+  background-color: var(--miro-yellow);
+}
+
+#clearComparisonBtn {
+  background-color: var(--miro-pink);
   color: black;
-  border: 2px solid var(--border);
+}
+
+.miro-button {
+  color: black;
   padding: 10px 20px;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
   font-size: 14px;
-  transition: all 12ms linear;
+  border: 2px solid var(--border);
+
+  /* Estado normal: ligeramente levantado */
+  transform: translate(-2px, -2px);
+
+  /* Sombra desplazada diagonalmente */
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--border);
+
+  transition:
+    transform 30ms ease,
+    box-shadow 30ms ease,
+    background 30ms ease;
 }
 
+/* Hover: se levanta hacia arriba-izquierda */
 .miro-button:hover {
-  border: 3px solid var(--border);
-  border-right: 10px solid var(--border);
-  border-bottom: 8px solid var(--border); 
+  transform: translate(-6px, -6px);
+
+  box-shadow: 10px 10px 0 var(--border);
 }
 
+/* Click: se hunde */
 .miro-button:active {
-  transform: translate(0, 0);
+  transform: translate(2px, 2px);
+
+  box-shadow: 2px 2px 0 var(--border);
+}
+
+.miro-button:focus-visible {
+  outline: 4px solid #4c9ffe;
+  outline-offset: 4px;
 }
 
 /* Summary Grid */
@@ -180,7 +225,9 @@ section {
   gap: 20px;
   cursor: pointer;
   position: relative;
-  transition: opacity 15ms steps(2), transform 15ms steps(2);
+  transition:
+    opacity 15ms steps(2),
+    transform 15ms steps(2);
 }
 
 .summary-card.visible {
@@ -307,7 +354,9 @@ section {
   background: white;
   border: 2px solid var(--border);
   padding: 20px;
-  transition: opacity 0.12s steps(3), transform 0.12s steps(3);
+  transition:
+    opacity 0.12s steps(3),
+    transform 0.12s steps(3);
 }
 
 .comparison-card.visible {
@@ -365,6 +414,7 @@ section {
 .search-wrapper input {
   padding: 10px 16px;
   border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
   font-family: inherit;
   font-size: 14px;
   width: 300px;
@@ -416,10 +466,17 @@ tr:hover td {
   background-color: var(--hover-bg);
 }
 
+#resultsTable {
+  border-right: 3px solid var(--border);
+  border-bottom: 3px solid var(--border);
+}
+
 #resultsTable tbody tr {
   opacity: 0;
   transform: translateX(-30px) scale(0.96);
-  transition: opacity 0.1s steps(3), transform 0.1s steps(3);
+  transition:
+    opacity 0.1s steps(3),
+    transform 0.1s steps(3);
 }
 
 #resultsTable tbody tr.visible {
@@ -442,21 +499,21 @@ tr:hover td {
   .header h1 {
     font-size: 36px;
   }
-  
+
   .header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .section-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .search-wrapper input {
     width: 100%;
   }
-  
+
   .summary-grid {
     grid-template-columns: 1fr;
   }

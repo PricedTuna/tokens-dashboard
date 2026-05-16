@@ -5,19 +5,65 @@ const searchInput = document.getElementById("searchInput");
 
 let rawData = [];
 
-fileInput.addEventListener("change", async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-
-  const text = await file.text();
-  const json = JSON.parse(text);
-
+async function processJSON(json) {
   rawData = json;
   selectedFormats = [];
 
   renderSummary(json);
   renderComparison();
   renderTable(json);
+}
+
+fileInput.addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const text = await file.text();
+  try {
+    const json = JSON.parse(text);
+    processJSON(json);
+    document.getElementById("upload-options").classList.remove("show");
+  } catch (err) {
+    console.error("Error parsing JSON:", err);
+    alert("Error al cargar el archivo JSON");
+  }
+});
+
+// Dropdown Logic
+const dropdown = document.querySelector(".miro-dropdown");
+const dropdownBtn = document.getElementById("upload-json-btn");
+const dropdownOptions = document.getElementById("upload-options");
+const loadLatestBtn = document.getElementById("load-latest-btn");
+const loadLocalBtn = document.getElementById("load-local-btn");
+
+dropdownBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdown.classList.toggle("show");
+  dropdownOptions.classList.toggle("show");
+});
+
+document.addEventListener("click", () => {
+  dropdown.classList.remove("show");
+  dropdownOptions.classList.remove("show");
+});
+
+loadLocalBtn.addEventListener("click", () => {
+  fileInput.click();
+});
+
+loadLatestBtn.addEventListener("click", async () => {
+  try {
+    const response = await fetch("results/latest-gemini-3-flash-preview.json");
+    if (!response.ok) throw new Error("No se pudo cargar el archivo");
+    
+    const json = await response.json();
+    processJSON(json);
+    dropdown.classList.remove("show");
+    dropdownOptions.classList.remove("show");
+  } catch (err) {
+    console.error("Error loading latest results:", err);
+    alert("No se encontraron resultados recientes ('latest-*.json')");
+  }
 });
 
 document.getElementById("download-json-btn")?.addEventListener("click", () => {

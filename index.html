@@ -16,9 +16,19 @@
         <p>Visualiza y compara el consumo de tokens de tus evaluaciones.</p>
       </div>
       <div class="section-header">
-        <label for="fileInput" class="miro-select" id="upload-json-btn">
-          Cargar JSON ⌄
-        </label>
+        <div class="miro-dropdown">
+          <button class="miro-select" id="upload-json-btn">
+            Cargar resultados <span>⌄</span>
+          </button>
+          <div class="miro-dropdown-content" id="upload-options">
+            <div class="miro-dropdown-item" id="load-latest-btn">
+              <span class="icon">↻</span> Cargar últimos resultados
+            </div>
+            <div class="miro-dropdown-item" id="load-local-btn">
+              <span class="icon">⭱</span> Cargar JSON local
+            </div>
+          </div>
+        </div>
         <input type="file" id="fileInput" accept=".json" />
       </div>
     </header>

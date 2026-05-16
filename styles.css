@@ -180,9 +180,9 @@ section {
   box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--border);
 
   transition:
-    transform 30ms ease,
-    box-shadow 30ms ease,
-    background 30ms ease;
+    transform 60ms ease,
+    box-shadow 60ms ease,
+    background 60ms ease;
 }
 
 .miro-shadow:hover {
@@ -203,6 +203,12 @@ section {
   border: 2px solid var(--border);
 }
 
+/* Dropdown */
+.miro-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
 .miro-select {
   color: black;
   padding: 10px 20px;
@@ -211,12 +217,89 @@ section {
   font-family: inherit;
   font-size: 14px;
   border: 2px solid var(--border);
+  background-color: var(--miro-blue);
+  color: white;
 
   /* Estado normal: ligeramente levantado */
   transform: translate(-2px, -2px);
 
   /* Sombra desplazada diagonalmente */
   box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--border);
+  transition: all 60ms ease;
+}
+
+.miro-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background-color: white;
+  border: 2px solid var(--border);
+  box-shadow: 8px 8px 0 var(--border);
+  z-index: 1000;
+  margin-top: 10px;
+  transform-origin: top left;
+}
+
+.miro-dropdown-content.show {
+  display: block;
+  animation: dropdownShow 60ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes dropdownShow {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.miro-select span {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.miro-dropdown.show .miro-select span {
+  transform: rotate(180deg);
+}
+
+.miro-dropdown-item {
+  padding: 12px 16px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--border);
+  transition: background-color 60ms ease;
+}
+
+.miro-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.miro-dropdown-item:hover {
+  background-color: var(--miro-yellow);
+}
+
+.miro-dropdown-item .icon {
+  font-size: 18px;
+}
+
+.miro-select:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 var(--border);
+}
+
+.miro-select:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--border);
 }
 
 /* Hover: se levanta hacia arriba-izquierda */
@@ -253,8 +336,8 @@ section {
   cursor: pointer;
   position: relative;
   transition:
-    opacity 15ms steps(2),
-    transform 15ms steps(2);
+    opacity 60ms steps(2),
+    transform 60ms steps(2);
 }
 
 .summary-card.visible {
@@ -382,8 +465,8 @@ section {
   border: 2px solid var(--border);
   padding: 20px;
   transition:
-    opacity 0.12s steps(3),
-    transform 0.12s steps(3);
+    opacity 60ms steps(3),
+    transform 60ms steps(3);
 }
 
 .comparison-card.visible {
@@ -502,8 +585,8 @@ tr:hover td {
   opacity: 0;
   transform: translateX(-30px) scale(0.96);
   transition:
-    opacity 0.1s steps(3),
-    transform 0.1s steps(3);
+    opacity 60ms steps(3),
+    transform 60ms steps(3);
 }
 
 #resultsTable tbody tr.visible {

@@ -225,7 +225,11 @@ section {
 
   /* Sombra desplazada diagonalmente */
   box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--border);
-  transition: all 60ms ease;
+  
+  transition:
+    transform 60ms ease,
+    box-shadow 60ms ease,
+    background 60ms ease;
 }
 
 .miro-dropdown-content {
@@ -293,7 +297,7 @@ section {
 }
 
 .miro-select:hover {
-  transform: translate(-4px, -4px);
+  transform: translate(-6px, -6px);
   box-shadow: 10px 10px 0 var(--border);
 }
 

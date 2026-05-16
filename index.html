@@ -16,11 +16,8 @@
         <p>Visualiza y compara el consumo de tokens de tus evaluaciones.</p>
       </div>
       <div class="section-header">
-        <button class="miro-button" id="download-json-btn">
-          ⭳ Descargar
-        </button>
-        <label for="fileInput" class="miro-button" id="upload-json-btn">
-          Cargar JSON
+        <label for="fileInput" class="miro-select" id="upload-json-btn">
+          Cargar JSON ⌄
         </label>
         <input type="file" id="fileInput" accept=".json" />
       </div>
@@ -29,7 +26,7 @@
     <section class="summary-section">
       <div class="section-header">
         <h2>Resumen por Formato</h2>
-        <button id="sortBtn" class="miro-button">Total Tokens ↓</button>
+        <button id="sortBtn" class="miro-button miro-shadow">Total Tokens ↓</button>
       </div>
       <div id="summaryContainer" class="summary-grid"></div>
     </section>

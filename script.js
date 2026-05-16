@@ -20,6 +20,10 @@ fileInput.addEventListener("change", async (e) => {
   renderTable(json);
 });
 
+document.getElementById("download-json-btn")?.addEventListener("click", () => {
+  // ToDO: Descargar la carpeta de results como un .zip
+})
+
 document.getElementById("sortBtn")?.addEventListener("click", () => {
   currentSortOrder = currentSortOrder === "desc" ? "asc" : "desc";
   const btn = document.getElementById("sortBtn");

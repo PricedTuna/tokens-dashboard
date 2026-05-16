@@ -172,7 +172,38 @@ section {
   color: black;
 }
 
+.miro-shadow {
+  /* Estado normal: ligeramente levantado */
+  transform: translate(-2px, -2px);
+
+  /* Sombra desplazada diagonalmente */
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--border);
+
+  transition:
+    transform 30ms ease,
+    box-shadow 30ms ease,
+    background 30ms ease;
+}
+
+.miro-shadow:hover {
+  box-shadow: 10px 10px 0 var(--border);
+}
+
+.miro-shadow:active {
+  box-shadow: 2px 2px 0 var(--border);
+}
+
 .miro-button {
+  color: black;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  border: 2px solid var(--border);
+}
+
+.miro-select {
   color: black;
   padding: 10px 20px;
   font-weight: 600;
@@ -186,25 +217,16 @@ section {
 
   /* Sombra desplazada diagonalmente */
   box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--border);
-
-  transition:
-    transform 30ms ease,
-    box-shadow 30ms ease,
-    background 30ms ease;
 }
 
 /* Hover: se levanta hacia arriba-izquierda */
 .miro-button:hover {
   transform: translate(-6px, -6px);
-
-  box-shadow: 10px 10px 0 var(--border);
 }
 
 /* Click: se hunde */
 .miro-button:active {
   transform: translate(2px, 2px);
-
-  box-shadow: 2px 2px 0 var(--border);
 }
 
 .miro-button:focus-visible {

@@ -30,7 +30,7 @@
   /* Miro Colors */
   --miro-yellow: #ffd029;
   --miro-blue: #0500ff;
-  --miro-green: #42b883;
+  --miro-green: #34b67b;
   --miro-pink: #ea4c89;
   --miro-orange: #ff7233;
 
@@ -153,6 +153,11 @@ section {
 }
 
 /* Buttons */
+#download-json-btn {
+  background-color: var(--miro-green);
+  color: white;
+}
+
 #upload-json-btn {
   background-color: var(--miro-blue);
   color: white;

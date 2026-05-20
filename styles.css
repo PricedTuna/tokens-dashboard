@@ -338,8 +338,17 @@ section {
   cursor: pointer;
 }
 
+.summary-card.hidden {
+  display: none;
+}
+
 .summary-card:hover {
   background-color: var(--hover-bg);
+}
+
+#showAllBtn {
+  margin: 24px auto 0;
+  display: block;
 }
 
 .summary-card.selected {

@@ -4,10 +4,12 @@ const tableBody = document.querySelector("#resultsTable tbody");
 const searchInput = document.getElementById("searchInput");
 
 let rawData = [];
+let showAllCards = false;
 
 async function processJSON(json) {
   rawData = json;
   selectedFormats = [];
+  showAllCards = false;
 
   renderSummary(json);
   renderComparison();
@@ -79,7 +81,7 @@ document.getElementById("sortBtn")?.addEventListener("click", () => {
   renderSummary(rawData);
 });
 
-let currentSortOrder = "desc";
+let currentSortOrder = "asc";
 let selectedFormats = [];
 
 document.getElementById("clearComparisonBtn")?.addEventListener("click", () => {
@@ -371,6 +373,15 @@ summaryContainer.addEventListener('click', (e) => {
   });
 });
 
+// Botón "Mostrar todos"
+document.getElementById('showAllBtn').addEventListener('click', () => {
+  showAllCards = true;
+  document.querySelectorAll('.summary-card.hidden').forEach(card => {
+    card.classList.remove('hidden');
+  });
+  document.getElementById('showAllBtn').style.display = 'none';
+});
+
 // Función para mostrar elementos con CSS transition
 function showElements(selector, className, delay = 30) {
   setTimeout(() => {
@@ -389,10 +400,23 @@ renderSummary = function(data, sortBy) {
     showElements('.summary-card', 'visible', 100);
     isFirstRender = false;
   } else {
-    // En re-renders, asegurar que todos tengan visible
     document.querySelectorAll('.summary-card').forEach(card => {
       card.classList.add('visible');
     });
+  }
+
+  const cards = document.querySelectorAll('.summary-card');
+  const showAllBtn = document.getElementById('showAllBtn');
+
+  if (cards.length > 4) {
+    showAllBtn.style.display = '';
+    if (!showAllCards) {
+      cards.forEach((card, i) => {
+        if (i >= 4) card.classList.add('hidden');
+      });
+    }
+  } else {
+    showAllBtn.style.display = 'none';
   }
 };
 

@@ -329,8 +329,6 @@ section {
 }
 
 .summary-card {
-  opacity: 0;
-  transform: translateY(80px) scale(0.85);
   background: var(--card-bg);
   border: 2px solid var(--border);
   padding: 24px;
@@ -338,15 +336,6 @@ section {
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
-  position: relative;
-  transition:
-    opacity 60ms steps(2),
-    transform 60ms steps(2);
-}
-
-.summary-card.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 .summary-card:hover {

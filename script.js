@@ -179,7 +179,7 @@ function renderSummary(data, sortBy = "total") {
     ).toFixed(2);
 
     const card = document.createElement("div");
-    card.className = `summary-card ${selectedFormats.includes(format) ? "selected" : ""}`;
+    card.className = `summary-card miro-button miro-shadow ${selectedFormats.includes(format) ? "selected" : ""}`;
 
     card.addEventListener("click", () => {
       if (selectedFormats.includes(format)) {
